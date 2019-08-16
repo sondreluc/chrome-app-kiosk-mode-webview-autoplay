@@ -1,0 +1,21 @@
+{
+  "name": "chrome-app-kiosk-mode-webview-autoplay",
+  "description": "Test app for autoplay of sound in webview",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["./chrome/background.js"]
+    }
+  },
+  "permissions": ["webview"],
+  "webview": {
+    "partitions": [
+      {
+        "name": "sound",
+        "accessible_resources": ["external_page.html", "test-sound.mp3"]
+      }
+    ]
+  },
+  "kiosk_enabled": true
+}
