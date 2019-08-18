@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>External page with autoplaying audio rendered in webview</title>
+    <title>Page with autoplaying audio rendered in webview</title>
 </head>
 
-<body>
-    <audio id="soundTest">
+<body style="background: red">
+    <audio id="soundTest" controls="controls">
         <source src="test-sound.mp3" type="audio/mp3" />
     </audio>
 
@@ -22,7 +22,7 @@
                     console.log('error playing sound inside webview')
                     console.log(error);
                 });;
-        }, 2000);
+        }, 3000);
     </script>
 </body>
 

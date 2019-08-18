@@ -5,7 +5,7 @@
   "manifest_version": 2,
   "app": {
     "background": {
-      "scripts": ["./chrome/background.js"]
+      "scripts": ["./background.js"]
     }
   },
   "permissions": ["webview"],
@@ -13,7 +13,11 @@
     "partitions": [
       {
         "name": "sound",
-        "accessible_resources": ["external_page.html", "test-sound.mp3"]
+        "accessible_resources": [
+          "webview_page.html",
+          "*.mp3",
+          "https://app.salesscreen.dev/slider?apikey=43d1c710-d3ee-40bd-93bb-bae9a1cd518c"
+        ]
       }
     ]
   },
