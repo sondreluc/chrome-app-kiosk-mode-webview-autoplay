@@ -1,16 +1,9 @@
-setTimeout(() => {
-    document.getElementById('soundTest')
-        .play()
-        .then(() => {
-            console.log('sound played outside webview')
-        })
-        .catch(error => {
-            console.log('error playing sound outside webview')
-            console.log(error);
-        });
-}, 500);
-
-window.addEventListener('message', (e) => {
-    log("[???] messagereceived: " + e.data);
-    console.log("received message", e);
-});
+setTimeout(function () {
+    const output = document.getElementById('output')
+    const audio = document.getElementById('soundTest')
+    audio.play().then(function () {
+        output.innerHTML = 'Sound plays!'
+    }).catch(function (e) {
+        output.innerHTML = e
+    })
+}, 3000)

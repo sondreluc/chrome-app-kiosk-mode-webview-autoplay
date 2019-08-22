@@ -6,19 +6,18 @@
     <title>Chrome App Webview Autoplay</title>
 </head>
 
-<body>
+<body style="font-size: 18px">
     <div>
-        <p>Simple html audio tag</p>
-        <audio id="soundTest" controls="controls">
+        <p>Simple html audio tag which should play after 3 seconds</p>
+        <audio id="soundTest" controls>
             <source src="test-sound.mp3" type="audio/mp3" />
         </audio>
+        <p id="output">Waiting...</p>
 
         <p>This is the same audio tag in an html file inside of a webview...</p>
-        <webview partition="sound" style="width:500px; height:300px;" autosize="true" src="webview_page.html">
-        <webview partition="sound" style="width:500px; height:300px;" autosize="true" src="https://app.salesscreen.dev/slider?apikey=43d1c710-d3ee-40bd-93bb-bae9a1cd518c">
+        <webview style="border: red 2px solid; width:500px; height:200px;" src="https://sondrestaticweb.z6.web.core.windows.net/">
         </webview>
     </div>
-
 
     <script type="text/javascript" src="index.js"></script>
 </body>

@@ -1,5 +1,5 @@
 {
-  "name": "chrome-app-kiosk-mode-webview-autoplay",
+  "name": "chrome-app-webview-autoplay",
   "description": "Test app for autoplay of sound in webview",
   "version": "0.0.1",
   "manifest_version": 2,
@@ -8,18 +8,5 @@
       "scripts": ["./background.js"]
     }
   },
-  "permissions": ["webview"],
-  "webview": {
-    "partitions": [
-      {
-        "name": "sound",
-        "accessible_resources": [
-          "webview_page.html",
-          "*.mp3",
-          "https://app.salesscreen.dev/slider?apikey=43d1c710-d3ee-40bd-93bb-bae9a1cd518c"
-        ]
-      }
-    ]
-  },
-  "kiosk_enabled": true
+  "permissions": ["webview"]
 }
